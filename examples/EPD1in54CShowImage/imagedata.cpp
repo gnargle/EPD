@@ -28,6 +28,8 @@
 #include <avr/pgmspace.h>
 #elif defined(ESP8266) || defined(ESP32)
 #include <pgmspace.h>
+#elif defined(ARDUINO_ARDUINO_NANO33BLE) || defined(ARDUINO_ARCH_MBED_RP2040)|| defined(ARDUINO_ARCH_RP2040)
+#include <api/deprecated-avr-comp/avr/pgmspace.h>
 #endif
 
 const unsigned char IMAGE_BLACK[] PROGMEM = {
